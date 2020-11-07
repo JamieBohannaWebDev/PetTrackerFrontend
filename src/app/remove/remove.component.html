@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row my-5 py-5">
+    <div class="col">
+      <h1 class="display-4 text-center">Pet Tracker Speed App - Remove A Pet</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-center">
+      <h2 class="h4">Back To Dashboard</h2>
+      <button class="btn mt-4 btn-primary" routerLink="/">View</button>
+    </div>
+    <div class="col text-center">
+      <h2 class="h4">Add a New Pet</h2>
+      <button class="btn mt-4 btn-primary" routerLink="/add">View</button>
+    </div>
+    <div class="col text-center">
+      <h2 class="h4">Update a Pet</h2>
+      <button class="btn mt-4 btn-primary" routerLink="/update">View</button>
+    </div>
+  </div>
+
+  <div class="pet-information my-5 py-5" *ngIf="pets.length">
+    <div class="row text-center">
+      <div class="col h5">Pet Name</div>
+      <div class="col h5">Action</div>
+    </div>
+    <div class="row mt-3" *ngFor="let pet of pets">
+      <div class="col text-center">{{ pet['name'] }}</div>
+      <div class="col text-center"><button class="btn btn-danger" (click)="DeletePet(pet['_id'])">Delete</button></div>
+    </div>
+  </div>
+
+  <div class="my-5 py-5" *ngIf="!pets.length">
+    <h3 class="h3 text-center">Oops! Looks like you've got no pets!</h3>
+    <h4 class="h4 text-center mt-5">Start by adding a new pet</h4>
+  </div>
+</div>

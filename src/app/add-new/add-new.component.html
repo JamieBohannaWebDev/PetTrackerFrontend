@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row my-5 py-5">
+    <div class="col">
+      <h1 class="display-4 text-center">Pet Tracker Speed App - Add A Pet</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-center">
+      <h2 class="h4">Back To Dashboard</h2>
+      <button class="btn mt-4 btn-primary" routerLink="/">View</button>
+    </div>
+    <div class="col text-center">
+      <h2 class="h4">Update A Pet</h2>
+      <button class="btn mt-4 btn-primary" routerLink="/update">View</button>
+    </div>
+    <div class="col text-center">
+      <h2 class="h4">Remove A Pet</h2>
+      <button class="btn mt-4 btn-primary" routerLink="/remove">View</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col"><h5 class="h5 mt-5 pt-5 text-center">Please enter in new pet information below</h5></div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center mt-5">
+    <form>
+      <div class="form-group">
+        <label for="petName">Pet Name</label>
+        <input type="text" class="form-control" id="petName" aria-describedby="petName" [(ngModel)]="petName" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="petType">Pet Type</label>
+        <input type="text" class="form-control" id="petType" [(ngModel)]="petType" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="petBreed">Pet Breed</label>
+        <input type="text" class="form-control" id="petBreed" [(ngModel)]="petBreed" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="petGender">Pet Gender</label>
+        <input type="text" class="form-control" id="petGender" [(ngModel)]="petGender" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="petAge">Pet Age (years)</label>
+        <input type="number" class="form-control" id="petAge" [(ngModel)]="petAge" [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <label for="petColor">Pet Colour</label>
+        <input type="text" class="form-control" id="petColor" [(ngModel)]="petColor" [ngModelOptions]="{standalone: true}">
+      </div>
+      <button class="btn btn-primary" (click)="AddNewPet()">Submit</button>
+    </form>
+  </div>
+</div>
